@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--You don't have to change anything here-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/titleMargin"
+    android:paddingRight="@dimen/padding"
+    android:paddingLeft="@dimen/padding"
+    android:orientation="vertical"
+    tools:context=".InfoActivity">
+
+            <TextView
+                android:id="@+id/aboutLicense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textSize"
+                android:text="@string/about_text"
+                android:textColor="@color/black"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textSize"
+                android:textStyle="italic"
+                android:linksClickable="true"
+                android:text="@string/link_to_github"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/buttonToLicense"
+                android:text="@string/view_license"
+                style="@style/button"
+                />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="30">
+            </Space>
+
+    <include layout="@layout/navbar" />
+</LinearLayout>

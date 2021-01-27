@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Make the necessary accessibility changes-->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding"
+    android:orientation="horizontal"
+    android:theme="@style/AppTheme"
+    tools:context=".ChangeRequestsActivity">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/allHolder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/changeRequestsTitle"
+                android:text="@string/set_requests_header"
+                style="@style/title" />
+
+            <LinearLayout
+                android:id="@+id/requestHolder1"
+                style="@style/changeholder">
+
+                <TextView
+                    android:id="@+id/request1"
+                    android:background="@color/color1"
+                    android:text="@string/blank_request"
+                    style="@style/changetext" />
+
+                <ImageView
+                    android:id="@+id/deleteRequest1"
+                    app:tint="@color/iconTint"
+                    style="@style/delete" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/requestHolder2"
+                style="@style/changeholder">
+
+                <TextView
+                    android:id="@+id/request2"
+                    android:background="@color/color2"
+                    android:text="@string/blank_request"
+                    style="@style/changetext"/>
+
+                <ImageView
+                    android:id="@+id/deleteRequest2"
+                    app:tint="@color/iconTint"
+                    style="@style/delete"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/requestHolder3"
+                style="@style/changeholder">
+
+                <TextView
+                    android:id="@+id/request3"
+                    android:background="@color/color3"
+                    android:text="@string/blank_request"
+                    style="@style/changetext"/>
+
+                <ImageView
+                    android:id="@+id/deleteRequest3"
+                    app:tint="@color/iconTint"
+                    style="@style/delete"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/requestHolder4"
+                style="@style/changeholder">
+
+                <TextView
+                    android:id="@+id/request4"
+                    android:background="@color/color4"
+                    android:text="@string/blank_request"
+                    style="@style/changetext"/>
+
+                <ImageView
+                    android:id="@+id/deleteRequest4"
+                    app:tint="@color/iconTint"
+                    style="@style/delete"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/setNewRequest"
+                android:hint="@string/enter_new_request"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:textColorHint="@color/hints"
+                android:imeActionLabel="@string/keyboard_save"
+                style="@style/button" />
+
+            <Button
+                android:id="@+id/saveNewRequest"
+                android:background="@color/settings"
+                android:text="@string/save_new_request"
+                style="@style/button"/>
+
+            <include layout="@layout/navbar" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</android.support.constraint.ConstraintLayout>

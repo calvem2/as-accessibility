@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tutorial_reset">Restarting the tutorial</string>
+    <string name="tutorial_first_run_msg">This is the first run. YAY! Go to settings to set up your app</string>
+    <string name="tutorial_settings_msg">Here you can set up your messages and contacts. You can also turn location on and off. If location is on, a link to your location will be sent with each message.</string>
+    <string name="tutorial_contact_groups_msg">This is where you set up contacts to text. To name the contact, type the name down below and press the save new contact button. To add or remove contacts from a contact, press on the button with that contact\'s name on it. The buttons on the right let you delete a contact.</string>
+    <string name="tutorial_requests_msg">Here you can set your messages. Enter the message you want down below and press the save new button. You can use the small button on the right to delete an already preset message.</string>
+</resources>

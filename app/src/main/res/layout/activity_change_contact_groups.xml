@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Make the necessary accessibility changes-->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding"
+    android:orientation="horizontal"
+    android:theme="@style/AppTheme"
+    tools:context=".ChangeContactGroupsActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/allHolder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/changeContactsTitle"
+                android:text="@string/set_contacts_header"
+                style="@style/title" />
+
+            <LinearLayout
+                android:id="@+id/contactHolder1"
+                style="@style/changeholder">
+
+                <TextView
+                    android:id="@+id/contactGroup1"
+		            android:text="@string/blank_contact_group1"
+                    style="@style/changetext"/>
+
+                <ImageView
+                    android:id="@+id/deleteContact1"
+                    app:tint="@color/iconTint"
+                    style="@style/delete"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contactHolder2"
+                style="@style/changeholder">
+
+                <TextView
+                    android:id="@+id/contactGroup2"
+                    android:text="@string/blank_contact_group2"
+                    style="@style/changetext"/>
+
+                <ImageView
+                    android:id="@+id/deleteContact2"
+                    app:tint="@color/iconTint"
+                    style="@style/delete"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/contactHolder3"
+                style="@style/changeholder">
+
+                <TextView
+                    android:id="@+id/contactGroup3"
+                    android:text="@string/blank_contact_group3"
+                    style="@style/changetext"/>
+
+                <ImageView
+                    android:id="@+id/deleteContact3"
+                    app:tint="@color/iconTint"
+                    style="@style/delete"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/contactHolder4"
+                style="@style/changeholder">
+
+                <TextView
+                    android:id="@+id/contactGroup4"
+                    android:inputType="text"
+	                android:text="@string/blank_contact_group4"
+                    style="@style/changetext"/>
+
+                <ImageView
+                    android:id="@+id/deleteContact4"
+                    app:tint="@color/iconTint"
+                    style="@style/delete"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/setNewContactGroup"
+                android:hint="@string/enter_new_contact_group"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:textColorHint="@color/hints"
+                style="@style/button" />
+
+            <Button
+                android:id="@+id/saveNewContactGroup"
+                android:background="@color/settings"
+                android:text="@string/save_new_contact_group"
+                style="@style/button" />
+
+            <include layout="@layout/navbar" />
+            </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</android.support.constraint.ConstraintLayout>
