@@ -29,25 +29,25 @@
                 android:id="@+id/request1"
                 style="@style/button"
                 android:background="@color/color1"
-                android:minHeight="@dimen/minTargetSize" />
+                android:hint="@string/unset_request" />
 
             <TextView
                 android:id="@+id/request2"
                 style="@style/button"
                 android:background="@color/color2"
-                android:minHeight="@dimen/minTargetSize" />
+                android:hint="@string/unset_request" />
 
             <TextView
                 android:id="@+id/request3"
                 style="@style/button"
                 android:background="@color/color3"
-                android:minHeight="@dimen/minTargetSize" />
+                android:hint="@string/unset_request" />
 
             <TextView
                 android:id="@+id/request4"
                 style="@style/button"
                 android:background="@color/color4"
-                android:minHeight="@dimen/minTargetSize" />
+                android:hint="@string/unset_request" />
 
             <include layout="@layout/navbar" />
 

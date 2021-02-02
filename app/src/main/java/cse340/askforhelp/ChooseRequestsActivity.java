@@ -87,7 +87,7 @@ public class ChooseRequestsActivity extends AbstractAFHActivity {
                 if (request.isEmpty()) {
 //                    textView.setFocusable(false);
 //                    textView.setFocusableInTouchMode(true);
-                    textView.setHint(R.string.unset_request);
+//                    textView.setHint(R.string.unset_request);
                     // TODO: should these be skipped altogether? or only when swiping linearly
                     textView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
                 }
