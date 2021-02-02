@@ -31,14 +31,16 @@
 
                 <TextView
                     android:id="@+id/request1"
+                    style="@style/changetext"
                     android:background="@color/color1"
-                    android:text="@string/blank_request"
-                    style="@style/changetext" />
+                    android:minHeight="@dimen/minTargetSize"
+                    android:text="@string/blank_request" />
 
                 <ImageView
                     android:id="@+id/deleteRequest1"
-                    app:tint="@color/iconTint"
-                    style="@style/delete" />
+                    style="@style/delete"
+                    android:contentDescription="@string/delete_request"
+                    app:tint="@color/iconTint" />
             </LinearLayout>
 
             <LinearLayout
@@ -47,14 +49,16 @@
 
                 <TextView
                     android:id="@+id/request2"
+                    style="@style/changetext"
                     android:background="@color/color2"
-                    android:text="@string/blank_request"
-                    style="@style/changetext"/>
+                    android:minHeight="@dimen/minTargetSize"
+                    android:text="@string/blank_request" />
 
                 <ImageView
                     android:id="@+id/deleteRequest2"
-                    app:tint="@color/iconTint"
-                    style="@style/delete"/>
+                    style="@style/delete"
+                    android:contentDescription="@string/delete_request"
+                    app:tint="@color/iconTint" />
             </LinearLayout>
 
 
@@ -64,14 +68,16 @@
 
                 <TextView
                     android:id="@+id/request3"
+                    style="@style/changetext"
                     android:background="@color/color3"
-                    android:text="@string/blank_request"
-                    style="@style/changetext"/>
+                    android:minHeight="@dimen/minTargetSize"
+                    android:text="@string/blank_request" />
 
                 <ImageView
                     android:id="@+id/deleteRequest3"
-                    app:tint="@color/iconTint"
-                    style="@style/delete"/>
+                    style="@style/delete"
+                    android:contentDescription="@string/delete_request"
+                    app:tint="@color/iconTint" />
             </LinearLayout>
 
 
@@ -81,25 +87,28 @@
 
                 <TextView
                     android:id="@+id/request4"
+                    style="@style/changetext"
                     android:background="@color/color4"
-                    android:text="@string/blank_request"
-                    style="@style/changetext"/>
+                    android:minHeight="@dimen/minTargetSize"
+                    android:text="@string/blank_request" />
 
                 <ImageView
                     android:id="@+id/deleteRequest4"
-                    app:tint="@color/iconTint"
-                    style="@style/delete"/>
+                    style="@style/delete"
+                    android:contentDescription="@string/delete_request"
+                    app:tint="@color/iconTint" />
             </LinearLayout>
 
             <EditText
                 android:id="@+id/setNewRequest"
+                style="@style/button"
                 android:hint="@string/enter_new_request"
+                android:imeActionLabel="@string/keyboard_save"
                 android:imeOptions="actionDone"
                 android:importantForAutofill="no"
                 android:inputType="textMultiLine"
-                android:textColorHint="@color/hints"
-                android:imeActionLabel="@string/keyboard_save"
-                style="@style/button" />
+                android:minHeight="@dimen/minTargetSize"
+                android:textColorHint="@color/hints" />
 
             <Button
                 android:id="@+id/saveNewRequest"
