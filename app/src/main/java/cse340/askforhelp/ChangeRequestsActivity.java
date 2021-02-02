@@ -3,6 +3,7 @@ package cse340.askforhelp;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.InputType;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +13,10 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+// Documentation used
+// TextView (hint) https://developer.android.com/reference/android/widget/TextView
+// View (skip elements): https://developer.android.com/reference/android/view/View
+// Android Accessibility: https://www.raywenderlich.com/240-android-accessibility-tutorial-getting-started#toc-anchor-014
 public class ChangeRequestsActivity extends AbstractAFHActivity {
 
     /** Maximum number of requests on the screen */
@@ -87,6 +92,10 @@ public class ChangeRequestsActivity extends AbstractAFHActivity {
             ImageView deleteRequest = mDeletes.get(ii);
             textView.setText(request);
 
+            // todo: do i need to do this? scanner says elements have same label
+            // set content description for button
+
+
             if (request.equals("")) {
                 deleteRequest.setEnabled(false);
 
@@ -94,6 +103,9 @@ public class ChangeRequestsActivity extends AbstractAFHActivity {
                 mSaveNewButton.setEnabled(true);
                 mEditRequestText.setEnabled(true);
 
+                textView.setHint(R.string.blank_request);
+                textView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
+                deleteRequest.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
             } else {
                 deleteRequest.setEnabled(true);
             }
@@ -169,13 +181,17 @@ public class ChangeRequestsActivity extends AbstractAFHActivity {
 
             if (shiftIndex == MAX_REQUESTS-1) { // We are at the last item
                 view.setText("");
+                view.setHint(R.string.blank_request);
                 delete.setEnabled(false);
             } else {
                 TextView view2 = mRequests.get(shiftIndex + 1);
                 view.setText(view2.getText());
 
                 if (view2.getText() == "") {
-                     delete.setEnabled(false);
+                    delete.setEnabled(false);
+                    view.setHint(R.string.blank_request);
+                    delete.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
+                    view.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
                     break;
                 }
             }
