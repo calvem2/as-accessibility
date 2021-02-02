@@ -3,9 +3,9 @@
     <dimen name="vMargin">10dp</dimen>
     <dimen name="padding">5dp</dimen>
     <dimen name="titleMargin">20dp</dimen>
-    <dimen name="buttonHeight">0dp</dimen>
+    <dimen name="buttonHeight">48dp</dimen>
     <dimen name="textSize">15sp</dimen>
     <dimen name="titleSize">20dp</dimen>
-    <dimen name="icon">20dp</dimen>
+    <dimen name="icon">48dp</dimen>
     <dimen name="iconBar">90dp</dimen>
 </resources>

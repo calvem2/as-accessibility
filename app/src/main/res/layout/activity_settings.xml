@@ -47,6 +47,7 @@
                 android:id="@+id/locationOnOff"
                 style="@style/button"
                 android:checked="false"
+                android:minHeight="@dimen/buttonHeight"
                 android:text="@string/location_off_on"
                 android:textOff="@string/location_off"
                 android:textOn="@string/location_on" />
@@ -67,10 +68,11 @@
                 android:id="@+id/home"
                 android:layout_width="@dimen/icon"
                 android:layout_height="@dimen/icon"
-                android:src="@drawable/home"
-                android:adjustViewBounds="true"
-                android:gravity="center"
                 android:layout_gravity="end"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/home"
+                android:gravity="center"
+                android:src="@drawable/home"
                 app:tint="@color/iconTint" />
 
         </LinearLayout>

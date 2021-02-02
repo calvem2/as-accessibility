@@ -21,6 +21,7 @@
         android:layout_gravity="end"
         android:layout_marginTop="@dimen/vMargin"
         android:adjustViewBounds="true"
+        android:contentDescription="@string/settings"
         android:src="@drawable/ic_baseline_settings_48"
         app:tint="@color/iconTint" />
 
@@ -28,9 +29,10 @@
         android:id="@+id/home"
         android:layout_width="@dimen/icon"
         android:layout_height="@dimen/icon"
-        android:src="@drawable/home"
-        android:adjustViewBounds="true"
-        android:gravity="center"
         android:layout_gravity="end"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/home"
+        android:gravity="center"
+        android:src="@drawable/home"
         app:tint="@color/iconTint" />
 </LinearLayout>

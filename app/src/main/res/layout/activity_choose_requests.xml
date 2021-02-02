@@ -27,26 +27,27 @@
 
             <TextView
                 android:id="@+id/request1"
+                style="@style/button"
                 android:background="@color/color1"
-                style="@style/button" />
+                android:minHeight="@dimen/buttonHeight" />
 
             <TextView
                 android:id="@+id/request2"
-                android:background="@color/color2"
                 style="@style/button"
-                />
+                android:background="@color/color2"
+                android:minHeight="@dimen/buttonHeight" />
 
             <TextView
                 android:id="@+id/request3"
-                android:background="@color/color3"
                 style="@style/button"
-                />
+                android:background="@color/color3"
+                android:minHeight="@dimen/buttonHeight" />
 
             <TextView
                 android:id="@+id/request4"
-                android:background="@color/color4"
                 style="@style/button"
-                />
+                android:background="@color/color4"
+                android:minHeight="@dimen/buttonHeight" />
 
             <include layout="@layout/navbar" />
 

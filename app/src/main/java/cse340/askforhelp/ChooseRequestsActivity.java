@@ -11,6 +11,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Objects;
 
+// Documentation used
+// TextView (hint) https://developer.android.com/reference/android/widget/TextView
+// View (skip elements) https://developer.android.com/reference/android/view/View
 public class ChooseRequestsActivity extends AbstractAFHActivity {
 
     /** Constant for the the request code for the permissions */
@@ -79,6 +82,14 @@ public class ChooseRequestsActivity extends AbstractAFHActivity {
                 // - A TextView should play its text.
                 // - But if it is blank it should explain what to do instead
                 // - And the basic navigation should skip it if it's blank so you can quickly go to settings
+//                textView.setHint("Empty request. Add requests in settings");
+                if (request.isEmpty()) {
+//                    textView.setFocusable(false);
+//                    textView.setFocusableInTouchMode(true);
+                    textView.setText(R.string.unset_request);
+                    // TODO: should these be skipped altogether? or only when swiping linearly
+                    textView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
+                }
 
             }
         } catch (Exception e) {
