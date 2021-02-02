@@ -47,7 +47,7 @@
                 android:id="@+id/locationOnOff"
                 style="@style/button"
                 android:checked="false"
-                android:minHeight="@dimen/buttonHeight"
+                android:minHeight="@dimen/minTargetSize"
                 android:text="@string/location_off_on"
                 android:textOff="@string/location_off"
                 android:textOn="@string/location_on" />
