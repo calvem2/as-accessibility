@@ -5,10 +5,10 @@
     <color name="colorAccent">#02645B</color>
     <color name="black">#000</color>
     <color name="color1">#0078FF</color>
-    <color name="color2">#225f77</color>
-    <color name="color3">#23776a</color>
-    <color name="color4">#277f4b</color>
+    <color name="color2">#3090B5</color>
+    <color name="color3">#278B7C</color>
+    <color name="color4">#2A8951</color>
     <color name="iconTint">#8F8F8F</color>
     <color name="settings">#8F8F8F</color>
-    <color name="hints">#D3D3D3</color>
+    <color name="hints">#737373</color>
 </resources>
