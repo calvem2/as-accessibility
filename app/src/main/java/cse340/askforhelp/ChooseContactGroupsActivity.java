@@ -22,6 +22,11 @@ import java.util.Iterator;
 import java.util.Objects;
 import java.util.Set;
 
+// Documentation used
+// TextView (hint) https://developer.android.com/reference/android/widget/TextView
+// View (skip elements): https://developer.android.com/reference/android/view/View
+// Android Accessibility: https://www.raywenderlich.com/240-android-accessibility-tutorial-getting-started#toc-anchor-014
+// Headings: https://developer.android.com/guide/topics/ui/accessibility/principles#headings_within_text
 public class ChooseContactGroupsActivity extends AbstractAFHActivity {
 
     /** Maximum number of contact groups on the screen */
@@ -165,6 +170,11 @@ public class ChooseContactGroupsActivity extends AbstractAFHActivity {
             // - A TextView should play its text.
             // - But if it is blank it should explain what to do instead
             // - And the basic navigation should skip it if it's blank so you can quickly go to settings
+            if (contacts.isEmpty()) {
+                // add visual explanation for empty requests; skip in navigation
+                textView.setHint(R.string.unset_contact);
+                textView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
+            }
         }
     }
 
