@@ -32,6 +32,7 @@ import java.util.Set;
 // Resource strings: https://developer.android.com/guide/topics/resources/string-resource
 // TextView (hint) https://developer.android.com/reference/android/widget/TextView
 // View (skip elements): https://developer.android.com/reference/android/view/View
+// Android Accessibility: https://www.raywenderlich.com/240-android-accessibility-tutorial-getting-started#toc-anchor-014
 public class ChangeContactGroupsActivity extends AbstractAFHActivity {
 
     /** Maximum number of contact groups on the screen */
@@ -144,7 +145,7 @@ public class ChangeContactGroupsActivity extends AbstractAFHActivity {
             textView.setText(contactGroupName);
 
             // todo: update content description for delete button
-            deleteRequest.setContentDescription(getResources().getString(R.string.delete_contact, contactGroupName));
+//            deleteRequest.setContentDescription(getResources().getString(R.string.delete_contact, contactGroupName));
 
             if (contactGroupName.equals("")) {
                 deleteRequest.setEnabled(false);
@@ -285,7 +286,7 @@ public class ChangeContactGroupsActivity extends AbstractAFHActivity {
                 view.setHint(getResources().getStringArray(R.array.blank_contacts)[MAX_GROUPS - 1]);
 
                 // todo: update delete button content description
-                delete.setContentDescription(getResources().getString(R.string.delete_contact, ""));
+//                delete.setContentDescription(getResources().getString(R.string.delete_contact, ""));
 
                 // todo: skip over blank contacts
                 delete.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
@@ -300,7 +301,7 @@ public class ChangeContactGroupsActivity extends AbstractAFHActivity {
                 mNumbers.get(shiftIndex).addAll(mNumbers.get(shiftIndex+1));
 
                 // todo: update delete button content description
-                delete.setContentDescription(getResources().getString(R.string.delete_contact, view2.getText()));
+//                delete.setContentDescription(getResources().getString(R.string.delete_contact, view2.getText()));
 
                 if (view2.getText().toString().isEmpty()) {
                     delete.setEnabled(false);
@@ -364,7 +365,7 @@ public class ChangeContactGroupsActivity extends AbstractAFHActivity {
                  contact.setHint(null);
 
                 // todo: update delete button content description
-                delete.setContentDescription(getResources().getString(R.string.delete_contact, newContactName));
+//                delete.setContentDescription(getResources().getString(R.string.delete_contact, newContactName));
 
                 // todo: add contact to navigation
                  contact.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_YES);

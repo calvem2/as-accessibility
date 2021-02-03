@@ -27,12 +27,14 @@
 
             <LinearLayout
                 android:id="@+id/requestHolder1"
-                style="@style/changeholder" >
+                style="@style/changeholder">
 
                 <TextView
                     android:id="@+id/request1"
                     style="@style/changetext"
-                    android:background="@color/color1" />
+                    android:background="@color/color1"
+                    android:labelFor="@id/deleteRequest1"
+                    android:text="@string/blank_request" />
 
                 <ImageView
                     android:id="@+id/deleteRequest1"
@@ -48,7 +50,9 @@
                 <TextView
                     android:id="@+id/request2"
                     style="@style/changetext"
-                    android:background="@color/color2" />
+                    android:background="@color/color2"
+                    android:labelFor="@id/deleteRequest2"
+                    android:text="@string/blank_request"/>
 
                 <ImageView
                     android:id="@+id/deleteRequest2"
@@ -65,7 +69,9 @@
                 <TextView
                     android:id="@+id/request3"
                     style="@style/changetext"
-                    android:background="@color/color3" />
+                    android:background="@color/color3"
+                    android:labelFor="@id/deleteRequest3"
+                    android:text="@string/blank_request"/>
 
                 <ImageView
                     android:id="@+id/deleteRequest3"
@@ -82,7 +88,9 @@
                 <TextView
                     android:id="@+id/request4"
                     style="@style/changetext"
-                    android:background="@color/color4" />
+                    android:background="@color/color4"
+                    android:labelFor="@id/deleteRequest4"
+                    android:text="@string/blank_request"/>
 
                 <ImageView
                     android:id="@+id/deleteRequest4"

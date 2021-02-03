@@ -29,20 +29,24 @@
     <string name="location_on">on</string>
     <string name="location_off">off</string>
     <string name="blank_request">Enter Request Text Below</string>
+    <string name="blank_contact_group1">Click to select contacts for Group 1</string>
+    <string name="blank_contact_group2">Click to select contacts for Group 2</string>
+    <string name="blank_contact_group3">Click to select contacts for Group 3</string>
+    <string name="blank_contact_group4">Click to select contacts for Group 4</string>
     <string-array name="blank_contacts">
-        <item>Click to select contacts for Group 1</item>
-        <item>Click to select contacts for Group 2</item>
-        <item>Click to select contacts for Group 3</item>
-        <item>Click to select contacts for Group 4</item>
+        <item>@string/blank_contact_group1</item>
+        <item>@string/blank_contact_group1</item>
+        <item>@string/blank_contact_group1</item>
+        <item>@string/blank_contact_group1</item>
     </string-array>
     <string name="about_text">This app is a streamlined messaging app. It is not meant to be used instead of 911. \n This app uses code from an outside library te select multiple contacts in the settings page. The library we used, MultiContactPicker, is licensed under the Apache License 2.0. Here is the link to the github repository of the code we used:</string>
     <string name="unset_request">Add requests in settings</string>
     <string name="home">Home</string>
-    <string name="delete_request">Delete request %1s</string>
+    <string name="delete_request">Delete request</string>
     <string name="deleted_request">Request deleted</string>
     <string name="add_blank_request">Request text field empty. No request added.</string>
     <string name="added_request">Added request %1s</string>
-    <string name="delete_contact">Delete group %1s</string>
+    <string name="delete_contact">Delete group</string>
     <string name="deleted_contact">Contact group deleted</string>
     <string name="add_blank_contact">Name text field empty. No contact group added.</string>
     <string name="added_contact">Added contact %1s</string>

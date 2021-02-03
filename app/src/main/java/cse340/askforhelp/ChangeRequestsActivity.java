@@ -17,8 +17,6 @@ import java.util.ArrayList;
 // TextView (hint) https://developer.android.com/reference/android/widget/TextView
 // View (skip elements): https://developer.android.com/reference/android/view/View
 // Android Accessibility: https://www.raywenderlich.com/240-android-accessibility-tutorial-getting-started#toc-anchor-014
-// Resources: https://developer.android.com/reference/android/content/res/Resources#getString(int,%20java.lang.Object...)
-// xml strings w formatting: https://stackoverflow.com/questions/3656371/is-it-possible-dynamically-to-add-string-to-string-xml-in-android
 public class ChangeRequestsActivity extends AbstractAFHActivity {
 
     /** Maximum number of requests on the screen */
@@ -95,7 +93,7 @@ public class ChangeRequestsActivity extends AbstractAFHActivity {
             textView.setText(request);
 
             // update content description for delete button
-            deleteRequest.setContentDescription(getResources().getString(R.string.delete_request, request));
+//            deleteRequest.setContentDescription(getResources().getString(R.string.delete_request));
 
             if (request.equals("")) {
                 deleteRequest.setEnabled(false);
@@ -110,6 +108,8 @@ public class ChangeRequestsActivity extends AbstractAFHActivity {
                 // skip over blank requests
                 textView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
                 deleteRequest.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
+//                textView.setFocusable(false);
+//                deleteRequest.setFocusable(false);
 
 
             } else {
@@ -202,11 +202,13 @@ public class ChangeRequestsActivity extends AbstractAFHActivity {
                 view.setHint(R.string.blank_request);
 
                 // update delete button content description
-                delete.setContentDescription(getResources().getString(R.string.delete_request, ""));
+//                delete.setContentDescription(getResources().getString(R.string.delete_request, ""));
 
                 // skip over blank requests
                 delete.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
                 view.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
+//                delete.setFocusable(false);
+//                view.setFocusable(false);
 //                Log.i("b", "" + view.getImportantForAccessibility());
 //                Log.i("c", "" + delete.getImportantForAccessibility());
 //                view.setHint(R.string.blank_request);
@@ -216,7 +218,7 @@ public class ChangeRequestsActivity extends AbstractAFHActivity {
                 view.setText(view2.getText());
 
                 // update delete button content description
-                delete.setContentDescription(getResources().getString(R.string.delete_request, view2.getText()));
+//                delete.setContentDescription(getResources().getString(R.string.delete_request, view2.getText()));
 
 //                Log.i("e", "new text is - " + view.getText() + "");
 //                Log.i("view2 text", "new text is - " + view2.getText().toString());
@@ -231,6 +233,8 @@ public class ChangeRequestsActivity extends AbstractAFHActivity {
                     // skip over empty requests
                     delete.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
                     view.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
+//                    delete.setFocusable(false);
+//                    view.setFocusable(false);
 
 //                    Log.i("f", view.getId() + " - " + view.getImportantForAccessibility());
 //                    Log.i("g", delete.getId() + " - "  + delete.isEnabled());
@@ -283,11 +287,14 @@ public class ChangeRequestsActivity extends AbstractAFHActivity {
                 request.setHint(null);
 
                 // update delete button content description
-                delete.setContentDescription(getResources().getString(R.string.delete_request, newRequestName));
+//                delete.setContentDescription(getResources().getString(R.string.delete_request, newRequestName));
 
                 // add request to navigation
                 request.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_YES);
                 delete.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_YES);
+//                delete.setFocusable(true);
+//                request.setFocusable(true);
+
 
                 // announce request added
                 mSaveNewButton.announceForAccessibility(getResources().getString(R.string.added_request, newRequestName));
