@@ -86,8 +86,6 @@ public class ChooseRequestsActivity extends AbstractAFHActivity {
                 // - And the basic navigation should skip it if it's blank so you can quickly go to settings
 //                textView.setHint("Empty request. Add requests in settings");
                 if (request.isEmpty()) {
-//                    textView.setFocusable(false);
-//                    textView.setFocusableInTouchMode(true);
                     textView.setHint(R.string.unset_request);
                     textView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
                 }
