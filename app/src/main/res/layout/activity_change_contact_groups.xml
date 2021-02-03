@@ -24,6 +24,7 @@
             <TextView
                 android:id="@+id/changeContactsTitle"
                 android:text="@string/set_contacts_header"
+                android:accessibilityHeading="true"
                 style="@style/title" />
 
             <LinearLayout

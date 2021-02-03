@@ -32,6 +32,7 @@ import java.util.Set;
 // TextView (hint) https://developer.android.com/reference/android/widget/TextView
 // View (skip elements): https://developer.android.com/reference/android/view/View
 // Android Accessibility: https://www.raywenderlich.com/240-android-accessibility-tutorial-getting-started#toc-anchor-014
+// Headings: https://developer.android.com/guide/topics/ui/accessibility/principles#headings_within_text
 public class ChangeContactGroupsActivity extends AbstractAFHActivity {
 
     /** Maximum number of contact groups on the screen */

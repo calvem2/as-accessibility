@@ -22,6 +22,7 @@
             <TextView
                 android:id="@+id/chooseContactsTitle"
                 android:text="@string/choose_contacts_header"
+                android:accessibilityHeading="true"
                 style="@style/title" />
 
             <TextView

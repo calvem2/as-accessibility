@@ -22,8 +22,9 @@
 
             <TextView
                 android:id="@+id/chooseRequestsTitle"
-                android:text="@string/choose_requests_header"
-                style="@style/title"  />
+                style="@style/title"
+                android:accessibilityHeading="true"
+                android:text="@string/choose_requests_header" />
 
             <TextView
                 android:id="@+id/request1"

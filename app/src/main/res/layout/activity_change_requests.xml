@@ -23,7 +23,8 @@
             <TextView
                 android:id="@+id/changeRequestsTitle"
                 android:text="@string/set_requests_header"
-                style="@style/title" />
+                style="@style/title"
+                android:accessibilityHeading="true"/>
 
             <LinearLayout
                 android:id="@+id/requestHolder1"
