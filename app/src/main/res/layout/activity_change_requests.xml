@@ -33,8 +33,7 @@
                     android:id="@+id/request1"
                     style="@style/changetext"
                     android:background="@color/color1"
-                    android:minHeight="@dimen/minTargetSize"
-                    android:text="@string/blank_request" />
+                    android:hint="@string/blank_request" />
 
                 <ImageView
                     android:id="@+id/deleteRequest1"
@@ -51,8 +50,7 @@
                     android:id="@+id/request2"
                     style="@style/changetext"
                     android:background="@color/color2"
-                    android:minHeight="@dimen/minTargetSize"
-                    android:text="@string/blank_request" />
+                    android:hint="@string/blank_request" />
 
                 <ImageView
                     android:id="@+id/deleteRequest2"
@@ -70,8 +68,7 @@
                     android:id="@+id/request3"
                     style="@style/changetext"
                     android:background="@color/color3"
-                    android:minHeight="@dimen/minTargetSize"
-                    android:text="@string/blank_request" />
+                    android:hint="@string/blank_request" />
 
                 <ImageView
                     android:id="@+id/deleteRequest3"
@@ -89,8 +86,7 @@
                     android:id="@+id/request4"
                     style="@style/changetext"
                     android:background="@color/color4"
-                    android:minHeight="@dimen/minTargetSize"
-                    android:text="@string/blank_request" />
+                    android:hint="@string/blank_request" />
 
                 <ImageView
                     android:id="@+id/deleteRequest4"

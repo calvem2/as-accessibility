@@ -103,12 +103,17 @@ public class ChangeRequestsActivity extends AbstractAFHActivity {
                 mSaveNewButton.setEnabled(true);
                 mEditRequestText.setEnabled(true);
 
-                textView.setHint(R.string.blank_request);
+//                textView.setText(R.string.blank_request);
                 textView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
                 deleteRequest.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
             } else {
                 deleteRequest.setEnabled(true);
+                textView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_YES);
+                deleteRequest.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_YES);
+
             }
+            Log.i("request status", request + " - " + textView.getImportantForAccessibility());
+            Log.i("button status", request + " - " + deleteRequest.getImportantForAccessibility());
         }
     }
 
@@ -173,6 +178,8 @@ public class ChangeRequestsActivity extends AbstractAFHActivity {
     private void bumpUpNames(int toDelete) {
         // Subtract 1 to adjust for 0 based indexing in the array list.
         int shiftIndex = toDelete - 1;
+        Log.i("test", "hi");
+        Log.i("deleting element at", shiftIndex + "");
 
         // TODO continue to maintain consistency in the accessibility behavior of your TextViews
         while (shiftIndex < MAX_REQUESTS) {
@@ -180,18 +187,34 @@ public class ChangeRequestsActivity extends AbstractAFHActivity {
             ImageView delete = mDeletes.get(shiftIndex);
 
             if (shiftIndex == MAX_REQUESTS-1) { // We are at the last item
+                Log.i("a", view.getText() + "");
                 view.setText("");
-                view.setHint(R.string.blank_request);
                 delete.setEnabled(false);
+
+                delete.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
+                view.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
+                Log.i("b", "" + view.getImportantForAccessibility());
+                Log.i("c", "" + delete.getImportantForAccessibility());
+//                view.setHint(R.string.blank_request);
             } else {
+                Log.i("d", view.getText() + "");
                 TextView view2 = mRequests.get(shiftIndex + 1);
                 view.setText(view2.getText());
 
-                if (view2.getText() == "") {
+                Log.i("e", "new text is - " + view.getText() + "");
+                Log.i("view2 text", "new text is - " + view2.getText().toString());
+                Log.i("if check", (view2.getText() == "") + "");
+                Log.i("if check test", (view2.getText().toString().isEmpty()) + "");
+                if (view2.getText().toString().isEmpty()) {
                     delete.setEnabled(false);
-                    view.setHint(R.string.blank_request);
+
                     delete.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
                     view.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
+
+                    Log.i("f", view.getId() + " - " + view.getImportantForAccessibility());
+                    Log.i("g", delete.getId() + " - "  + delete.isEnabled());
+                    Log.i("h", delete.getId() + " - "  + delete.getImportantForAccessibility());
+//                    view.setHint(R.string.blank_request);
                     break;
                 }
             }
@@ -233,6 +256,9 @@ public class ChangeRequestsActivity extends AbstractAFHActivity {
             if (request.getText().toString().equals("")) {
                 request.setText(newRequestName);
                 delete.setEnabled(true);
+//                request.setHint(R.string.blank_request);
+                request.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_YES);
+                delete.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_YES);
                 break;
             }
         }
