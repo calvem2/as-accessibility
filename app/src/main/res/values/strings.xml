@@ -36,5 +36,5 @@
     <string name="about_text">This app is a streamlined messaging app. It is not meant to be used instead of 911. \n This app uses code from an outside library te select multiple contacts in the settings page. The library we used, MultiContactPicker, is licensed under the Apache License 2.0. Here is the link to the github repository of the code we used:</string>
     <string name="unset_request">Add requests in settings</string>
     <string name="home">Home</string>
-    <string name="delete_request">Delete request</string>
+    <string name="delete_request">Delete request %1s</string>
 </resources>
