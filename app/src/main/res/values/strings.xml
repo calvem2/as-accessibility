@@ -37,4 +37,7 @@
     <string name="unset_request">Add requests in settings</string>
     <string name="home">Home</string>
     <string name="delete_request">Delete request %1s</string>
+    <string name="deleted_request">Request deleted</string>
+    <string name="add_blank_request">Request text field empty. No request added.</string>
+    <string name="added_request">Added request %1s</string>
 </resources>

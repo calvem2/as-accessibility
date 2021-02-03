@@ -138,6 +138,7 @@ public class ChangeRequestsActivity extends AbstractAFHActivity {
                     // text button, the text of which (the request) is being deleted.
 
                     // TODO You can use View.announceForAccessibility to tell the user this happened
+                    view.announceForAccessibility(getResources().getString(R.string.deleted_request));
 
                     // We have to map the the delete button to the text button
                     // to get which one in the list we're deleting
@@ -265,6 +266,7 @@ public class ChangeRequestsActivity extends AbstractAFHActivity {
         //   get to the text edit box.
 
         if (newRequestName.equals("")) {
+            mSaveNewButton.announceForAccessibility(getResources().getString(R.string.add_blank_request));
             return;
         }
 
@@ -286,6 +288,9 @@ public class ChangeRequestsActivity extends AbstractAFHActivity {
                 // add request to navigation
                 request.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_YES);
                 delete.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_YES);
+
+                // announce request added
+                mSaveNewButton.announceForAccessibility(getResources().getString(R.string.added_request, newRequestName));
                 break;
             }
         }
