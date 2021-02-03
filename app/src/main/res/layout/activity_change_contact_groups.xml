@@ -32,7 +32,6 @@
 
                 <TextView
                     android:id="@+id/contactGroup1"
-		            android:text="@string/blank_contact_group1"
                     style="@style/changetext"/>
 
                 <ImageView
@@ -47,7 +46,6 @@
 
                 <TextView
                     android:id="@+id/contactGroup2"
-                    android:text="@string/blank_contact_group2"
                     style="@style/changetext"/>
 
                 <ImageView
@@ -63,7 +61,6 @@
 
                 <TextView
                     android:id="@+id/contactGroup3"
-                    android:text="@string/blank_contact_group3"
                     style="@style/changetext"/>
 
                 <ImageView
@@ -80,7 +77,6 @@
                 <TextView
                     android:id="@+id/contactGroup4"
                     android:inputType="text"
-	                android:text="@string/blank_contact_group4"
                     style="@style/changetext"/>
 
                 <ImageView

@@ -201,7 +201,7 @@ public class ChangeRequestsActivity extends AbstractAFHActivity {
                 // update hint
                 view.setHint(R.string.blank_request);
 
-                // update content description
+                // update delete button content description
                 delete.setContentDescription(getResources().getString(R.string.delete_request, ""));
 
                 // skip over blank requests
