@@ -152,7 +152,7 @@ public class ChangeContactGroupsActivity extends AbstractAFHActivity {
                 mEditContactGroupText.setEnabled(true);
 
                 // add hint explaining what to do for blank contact
-                textView.setHint(getResources().getStringArray(R.array.blank_contacts)[ii]);
+                textView.setHint(R.string.blank_contact);
 
                 // skip over blank contacts
                 textView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
@@ -280,7 +280,7 @@ public class ChangeContactGroupsActivity extends AbstractAFHActivity {
                 delete.setEnabled(false);
 
                 // update hint
-                view.setHint(getResources().getStringArray(R.array.blank_contacts)[MAX_GROUPS - 1]);
+                view.setHint(R.string.blank_contact);
 
                 // skip over blank contacts
                 delete.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
@@ -298,7 +298,7 @@ public class ChangeContactGroupsActivity extends AbstractAFHActivity {
                     delete.setEnabled(false);
 
                     // add hint for empty contact
-                    view.setHint(getResources().getStringArray(R.array.blank_contacts)[shiftIndex]);
+                    view.setHint(R.string.blank_contact);
 
                     // skip over empty contacts
                     delete.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
