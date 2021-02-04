@@ -13,7 +13,8 @@
     <TextView
         android:id="@+id/settingTitle"
         style="@style/title"
-        android:text="@string/settings" />
+        android:text="@string/settings"
+        android:accessibilityHeading="true"/>
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
